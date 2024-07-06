@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+		
+	<head>
+		<title>HTMX Example</title>
+		<script src="https://unpkg.com/htmx.org@2.0.0" integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw" crossorigin="anonymous"></script>
+	</head>
+		
+	<body>
+		<div style="display: flex;">
+			<textarea id="md" name="md" rows="10" cols="50" hx-post="/update" hx-trigger="keyup changed delay:500ms" hx-include="#md"></textarea>
+			<div id="html" hx-get="/update" hx-trigger="every 200ms"></div>
+		</div>
+	</body>
+		
+</html>
